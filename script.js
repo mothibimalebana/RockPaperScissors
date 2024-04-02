@@ -28,6 +28,15 @@ function playRound (playerSelection, computerSelection) {
         console.log(`You lose, ${computerSelection} beats ${playerSelection}`);
 
     //playerSelection == "Scissors"
-    
+    else if(playerSelection == "Scissor" && computerSelection == "Rock")
+        console.log(`You lose, ${computerSelection} beats ${playerSelection}`);
 
+    else if(playerSelection == "Scissor" && computerSelection == "Paper")
+        console.log(`You win, ${playerSelection} beats ${computerSelection}`);
+
+    else if(playerSelection == "Scissor" && computerSelection == "Scissor");
 }
+
+const playerSelection = "Rock";
+const computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
