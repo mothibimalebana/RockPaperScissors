@@ -14,7 +14,7 @@ function playRound (playerSelection, computerSelection) {
     else if(playerSelection == "Rock" && computerSelection == "Paper")
         console.log(`You lose, ${computerSelection} beats ${playerSelection}`);
 
-    else if(playerSelection == "Rock" && computerSelection == "Scissor")
+    else if(playerSelection == "Rock" && computerSelection == "Scissors")
         console.log(`You win, ${playerSelection} beats ${computerSelection}`);
 
     //playerSelection == "Rock"
@@ -24,19 +24,20 @@ function playRound (playerSelection, computerSelection) {
     else if(playerSelection == "Paper" && computerSelection == "Paper")
         console.log(`Draw, ${computerSelection} is the same as ${playerSelection}`);
 
-    else if(playerSelection == "Paper" && computerSelection == "Scissor")
+    else if(playerSelection == "Paper" && computerSelection == "Scissors")
         console.log(`You lose, ${computerSelection} beats ${playerSelection}`);
 
     //playerSelection == "Scissors"
-    else if(playerSelection == "Scissor" && computerSelection == "Rock")
+    else if(playerSelection == "Scissors" && computerSelection == "Rock")
         console.log(`You lose, ${computerSelection} beats ${playerSelection}`);
 
-    else if(playerSelection == "Scissor" && computerSelection == "Paper")
+    else if(playerSelection == "Scissors" && computerSelection == "Paper")
         console.log(`You win, ${playerSelection} beats ${computerSelection}`);
 
-    else if(playerSelection == "Scissor" && computerSelection == "Scissor");
+    else if(playerSelection == "Scissors" && computerSelection == "Scissors");
 }
 
 const playerSelection = "Rock";
 const computerSelection = getComputerChoice();
+console.log(`Player selection: ${playerSelection} \ncomputerSelection: ${computerSelection}`);
 console.log(playRound(playerSelection, computerSelection));
