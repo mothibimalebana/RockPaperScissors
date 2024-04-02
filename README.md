@@ -1,2 +1,9 @@
 # RockPaperScissors
-Rock, Paper, Scissors game implemented using HTML, CSS, and JavaScript for web development practice. Play against the computer and see who wins! This project showcases basic DOM manipulation and game logic implementation in JavaScript
+<h2>What it is?</h2>
+A quick win or lose game used to determine who goes first or has the privelage to do something
+
+<h2>How to Play?<h2>
+Two players randomly choose one of three selections (rock, paper or scissor)
+-Rock wins over Scissor
+-Paper wins over Rock
+-Scissor wins over Rock
