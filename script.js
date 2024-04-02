@@ -8,36 +8,40 @@ function getComputerChoice () {
 //function to play a round
 function playRound (playerSelection, computerSelection) {
     //playerSelection == "Rock"
-    if(playerSelection == "Rock" && computerSelection == "Rock")
+    if(playerSelection == "rock" && computerSelection == "Rock")
         console.log(`Draw, ${computerSelection} is the same as ${playerSelection}`);
 
-    else if(playerSelection == "Rock" && computerSelection == "Paper")
+    else if(playerSelection == "rock" && computerSelection == "Paper")
         console.log(`You lose, ${computerSelection} beats ${playerSelection}`);
 
-    else if(playerSelection == "Rock" && computerSelection == "Scissors")
+    else if(playerSelection == "rock" && computerSelection == "Scissors")
         console.log(`You win, ${playerSelection} beats ${computerSelection}`);
 
     //playerSelection == "Rock"
-    else if(playerSelection == "Paper" && computerSelection == "Rock")
+    else if(playerSelection == "paper" && computerSelection == "Rock")
         console.log(`You win, ${playerSelection} beats ${computerSelection}`);
 
-    else if(playerSelection == "Paper" && computerSelection == "Paper")
+    else if(playerSelection == "paper" && computerSelection == "Paper")
         console.log(`Draw, ${computerSelection} is the same as ${playerSelection}`);
 
-    else if(playerSelection == "Paper" && computerSelection == "Scissors")
+    else if(playerSelection == "paper" && computerSelection == "Scissors")
         console.log(`You lose, ${computerSelection} beats ${playerSelection}`);
 
     //playerSelection == "Scissors"
-    else if(playerSelection == "Scissors" && computerSelection == "Rock")
+    else if(playerSelection == "scissors" && computerSelection == "Rock")
         console.log(`You lose, ${computerSelection} beats ${playerSelection}`);
 
-    else if(playerSelection == "Scissors" && computerSelection == "Paper")
+    else if(playerSelection == "scissors" && computerSelection == "Paper")
         console.log(`You win, ${playerSelection} beats ${computerSelection}`);
 
-    else if(playerSelection == "Scissors" && computerSelection == "Scissors");
+    else if(playerSelection == "scissors" && computerSelection == "Scissors");
+
+    else
+        console.log("Either you didn't spell Scissors right or you choose a invalid token")
 }
 
-const playerSelection = "Rock";
+playerSelection = prompt("Please enter a selection:", "Rock/ Paper/ Scissors")
+playerSelection = playerSelection.toLowerCase();
+
 const computerSelection = getComputerChoice();
-console.log(`Player selection: ${playerSelection} \ncomputerSelection: ${computerSelection}`);
 console.log(playRound(playerSelection, computerSelection));
