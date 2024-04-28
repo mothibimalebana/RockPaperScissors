@@ -60,16 +60,6 @@ function playRound (playerSelection, computerSelection) {
     else
         console.log("Either you didn't spell Scissors right or you choose a invalid token")
 }
-//function to play a game (Best out of 5)
-function playGame() {
-    while((playerPoints < 5) && (computerPoints < 5)) {
-        const playerSelection = getPlayerChoice();
-        const computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection, computerSelection));
-        console.log(`Player points: ${playerPoints} \nComputer Points: ${computerPoints}`);
-    }
-    getWinner();
-}
 function getWinner(playerPoints, computerPoints) {
     if (playerPoints < computerPoints)
         console.log("Computer wins");
@@ -77,5 +67,6 @@ function getWinner(playerPoints, computerPoints) {
         console.log("You win");
 }
 
-playGame();
-
+playerSelection = getPlayerChoice();
+computerSelection = getComputerChoice();
+playRound(playerSelection, computerSelection);
