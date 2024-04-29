@@ -38,6 +38,12 @@ header {
 	margin-top: 0;
 }
 
+.hands {
+	display: flex;
+	flex-basis: 1 0 0;
+	justify-content: space-between;
+}
+
 footer {
 	margin-top: auto;
 	display: flex;
@@ -50,7 +56,8 @@ footer .chooseOne {
 
 	font-size: 30px;
 }
-footer .chooseOne h4{
+
+footer .chooseOne h4 {
 	margin-bottom: 0;
 }
 
