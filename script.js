@@ -6,12 +6,15 @@ const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
 
-//function to get player's choice
-function getPlayerChoice() {
-    
+rock.addEventListener("click", () => getPlayerChoice("rock"));
+paper.addEventListener("click", () => getPlayerChoice("paper"));
+scissors.addEventListener("click", () => getPlayerChoice("scissors"));
 
-    return playerSelection;
+//function to get player's choice
+function getPlayerChoice(choice) {
+    return choice ;
 }
+
 //function to get a choice for computer
 function getComputerChoice () {
     return gameChoices[(Math.floor(Math.random() * gameChoices.length))];
