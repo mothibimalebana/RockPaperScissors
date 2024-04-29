@@ -67,6 +67,6 @@ function getWinner(playerPoints, computerPoints) {
         console.log("You win");
 }
 
-playerSelection = getPlayerChoice();
-computerSelection = getComputerChoice();
-playRound(playerSelection, computerSelection);
+// playerSelection = getPlayerChoice();
+// computerSelection = getComputerChoice();
+// playRound(playerSelection, computerSelection);
