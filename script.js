@@ -5,6 +5,8 @@ let computerPoints = 0;
 const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
+const playerHand = document.getElementById("playerHand");
+const computerHand = document.getElementById("computerHand");
 
 rock.addEventListener("click", () => playRound("rock"));
 paper.addEventListener("click", () => playRound("paper"));
@@ -31,57 +33,56 @@ function playRound (playerSelection) {
 
     //playerSelection == "rock"
     if(playerSelection == "rock" && computerSelection == "rock"){
-        console.log('Draw');
+        playerHand.src = './img/HUMANrock.png';
+        computerHand.src = './img/AIrock.png';
     }
 
     else if(playerSelection == "rock" && computerSelection == "paper"){
         computerScore.textContent++;
-        console.log(`You lose, ${computerSelection} beats ${playerSelection}`);
+        playerHand.src = './img/HUMANrock.png';
+        computerHand.src = './img/AIpaper.png';
     }
 
     else if(playerSelection == "rock" && computerSelection == "scissors"){
         humanScore.textContent++;
-        console.log(`You win, ${playerSelection} beats ${computerSelection}`);
+        playerHand.src = './img/HUMANrock.png';
+        computerHand.src = './img/AIscissors.png';
     }
 
     //playerSelection == "rock"
     else if(playerSelection == "paper" && computerSelection == "rock"){
         humanScore.textContent++;
-        console.log(`You win, ${playerSelection} beats ${computerSelection}`);
+        playerHand.src = './img/HUMANpaper.png';
+        computerHand.src = './img/AIrock.png';
     }
 
-    else if(playerSelection == "paper" && computerSelection == "paper")
-        console.log(`Draw, ${computerSelection} is the same as ${playerSelection}`);
-
+    else if(playerSelection == "paper" && computerSelection == "paper"){
+        playerHand.src = './img/HUMANpaper.png';
+        computerHand.src = './img/AIpaper.png';
+    }
     else if(playerSelection == "paper" && computerSelection == "scissors"){
         computerScore.textContent++;
-        console.log(`You lose, ${computerSelection} beats ${playerSelection}`);
+        playerHand.src = './img/HUMANpaper.png';
+        computerHand.src = './img/AIscissors.png';
     }
 
     //playerSelection == "scissors"
     else if(playerSelection == "scissors" && computerSelection == "rock"){
         computerScore.textContent++;
-        console.log(`You lose, ${computerSelection} beats ${playerSelection}`);
+        playerHand.src = './img/HUMANscissors.png';
+        computerHand.src = './img/AIrock.png';
     }
 
     else if(playerSelection == "scissors" && computerSelection == "paper"){
         humanScore.textContent++;
-        console.log(`You win, ${playerSelection} beats ${computerSelection}`);
+        playerHand.src = './img/HUMANscissors.png';
+        computerHand.src = './img/AIpaper.png';
     }
 
-    else if(playerSelection == "scissors" && computerSelection == "scissors")
-        console.log(`Draw, ${computerSelection} is the same as ${playerSelection}`);    
-
+    else if(playerSelection == "scissors" && computerSelection == "scissors"){
+        playerHand.src = './img/HUMANscissors.png';
+        computerHand.src = './img/AIscissors.png';
+    }
     else
         console.log("Either you didn't spell scissors right or you choose a invalid token")
 }
-function getWinner(playerPoints, computerPoints) {
-    if (playerPoints < computerPoints)
-        console.log("Computer wins");
-    else
-        console.log("You win");
-}
-
-// playerSelection = getPlayerChoice();
-// computerSelection = getComputerChoice();
-// playRound(playerSelection);
