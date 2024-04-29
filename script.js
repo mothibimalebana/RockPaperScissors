@@ -2,10 +2,13 @@ let gameChoices = ["rock", "paper", "scissors"];
 let playerPoints = 0;
 let computerPoints = 0;
 
+const rock = document.getElementById("rock");
+const paper = document.getElementById("paper");
+const scissors = document.getElementById("scissors");
+
 //function to get player's choice
 function getPlayerChoice() {
-    playerSelection = prompt("Please enter a selection:", "rock/ paper/ scissors")
-    playerSelection = playerSelection.toLowerCase();
+    
 
     return playerSelection;
 }
