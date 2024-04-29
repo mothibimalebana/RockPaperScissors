@@ -1,10 +1,10 @@
-let gameChoices = ["Rock", "Paper", "Scissors"];
+let gameChoices = ["rock", "paper", "scissors"];
 let playerPoints = 0;
 let computerPoints = 0;
 
 //function to get player's choice
 function getPlayerChoice() {
-    playerSelection = prompt("Please enter a selection:", "Rock/ Paper/ Scissors")
+    playerSelection = prompt("Please enter a selection:", "rock/ paper/ scissors")
     playerSelection = playerSelection.toLowerCase();
 
     return playerSelection;
@@ -15,50 +15,50 @@ function getComputerChoice () {
 }
 //function to play a round
 function playRound (playerSelection, computerSelection) {
-    //playerSelection == "Rock"
-    if(playerSelection == "rock" && computerSelection == "Rock")
+    //playerSelection == "rock"
+    if(playerSelection == "rock" && computerSelection == "rock")
         console.log(`Draw, ${computerSelection} is the same as ${playerSelection}`);
 
-    else if(playerSelection == "rock" && computerSelection == "Paper"){
+    else if(playerSelection == "rock" && computerSelection == "paper"){
         computerPoints++;
         console.log(`You lose, ${computerSelection} beats ${playerSelection}`);
     }
 
-    else if(playerSelection == "rock" && computerSelection == "Scissors"){
+    else if(playerSelection == "rock" && computerSelection == "scissors"){
         playerPoints++;
         console.log(`You win, ${playerSelection} beats ${computerSelection}`);
     }
 
-    //playerSelection == "Rock"
-    else if(playerSelection == "paper" && computerSelection == "Rock"){
+    //playerSelection == "rock"
+    else if(playerSelection == "paper" && computerSelection == "rock"){
         playerPoints++;
         console.log(`You win, ${playerSelection} beats ${computerSelection}`);
     }
 
-    else if(playerSelection == "paper" && computerSelection == "Paper")
+    else if(playerSelection == "paper" && computerSelection == "paper")
         console.log(`Draw, ${computerSelection} is the same as ${playerSelection}`);
 
-    else if(playerSelection == "paper" && computerSelection == "Scissors"){
+    else if(playerSelection == "paper" && computerSelection == "scissors"){
         computerPoints++;
         console.log(`You lose, ${computerSelection} beats ${playerSelection}`);
     }
 
-    //playerSelection == "Scissors"
-    else if(playerSelection == "scissors" && computerSelection == "Rock"){
+    //playerSelection == "scissors"
+    else if(playerSelection == "scissors" && computerSelection == "rock"){
         computerPoints++;
         console.log(`You lose, ${computerSelection} beats ${playerSelection}`);
     }
 
-    else if(playerSelection == "scissors" && computerSelection == "Paper"){
+    else if(playerSelection == "scissors" && computerSelection == "paper"){
         playerPoints++;
         console.log(`You win, ${playerSelection} beats ${computerSelection}`);
     }
 
-    else if(playerSelection == "scissors" && computerSelection == "Scissors")
+    else if(playerSelection == "scissors" && computerSelection == "scissors")
         console.log(`Draw, ${computerSelection} is the same as ${playerSelection}`);    
 
     else
-        console.log("Either you didn't spell Scissors right or you choose a invalid token")
+        console.log("Either you didn't spell scissors right or you choose a invalid token")
 }
 function getWinner(playerPoints, computerPoints) {
     if (playerPoints < computerPoints)
