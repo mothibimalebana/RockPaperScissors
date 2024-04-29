@@ -68,3 +68,11 @@ footer .options {
 
 	font-size: 30px;
 }
+
+button {
+	font-family: "inter", sans-serif;
+	font-weight: 700;
+	border: none;
+	background-color: white;
+	font-size: 55px;
+}
