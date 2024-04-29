@@ -6,21 +6,23 @@ const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
 
-rock.addEventListener("click", () => getPlayerChoice("rock"));
-paper.addEventListener("click", () => getPlayerChoice("paper"));
-scissors.addEventListener("click", () => getPlayerChoice("scissors"));
+rock.addEventListener("click", () => playRound("rock"));
+paper.addEventListener("click", () => playRound("paper"));
+scissors.addEventListener("click", () => playRound("scissors"));
 
 //function to get player's choice
-function getPlayerChoice(choice) {
-    return choice ;
-}
+// function getPlayerChoice(choice) {
+//     return choice ;
+// }
 
 //function to get a choice for computer
 function getComputerChoice () {
     return gameChoices[(Math.floor(Math.random() * gameChoices.length))];
 }
 //function to play a round
-function playRound (playerSelection, computerSelection) {
+function playRound (playerSelection) {
+    computerSelection = gameChoices[(Math.floor(Math.random() * gameChoices.length))];
+    
     //playerSelection == "rock"
     if(playerSelection == "rock" && computerSelection == "rock")
         console.log(`Draw, ${computerSelection} is the same as ${playerSelection}`);
@@ -75,4 +77,4 @@ function getWinner(playerPoints, computerPoints) {
 
 // playerSelection = getPlayerChoice();
 // computerSelection = getComputerChoice();
-// playRound(playerSelection, computerSelection);
+// playRound(playerSelection);
