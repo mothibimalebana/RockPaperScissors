@@ -10,6 +10,12 @@ rock.addEventListener("click", () => playRound("rock"));
 paper.addEventListener("click", () => playRound("paper"));
 scissors.addEventListener("click", () => playRound("scissors"));
 
+let humanScore = document.getElementById("humanScore");
+let computerScore = document.getElementById("computerScore");
+humanScore.textContent = Number(playerPoints);
+computerScore.textContent = Number(computerPoints);
+
+
 //function to get player's choice
 // function getPlayerChoice(choice) {
 //     return choice ;
@@ -22,24 +28,25 @@ function getComputerChoice () {
 //function to play a round
 function playRound (playerSelection) {
     computerSelection = gameChoices[(Math.floor(Math.random() * gameChoices.length))];
-    
+
     //playerSelection == "rock"
-    if(playerSelection == "rock" && computerSelection == "rock")
-        console.log(`Draw, ${computerSelection} is the same as ${playerSelection}`);
+    if(playerSelection == "rock" && computerSelection == "rock"){
+        console.log('Draw');
+    }
 
     else if(playerSelection == "rock" && computerSelection == "paper"){
-        computerPoints++;
+        computerScore.textContent++;
         console.log(`You lose, ${computerSelection} beats ${playerSelection}`);
     }
 
     else if(playerSelection == "rock" && computerSelection == "scissors"){
-        playerPoints++;
+        humanScore.textContent++;
         console.log(`You win, ${playerSelection} beats ${computerSelection}`);
     }
 
     //playerSelection == "rock"
     else if(playerSelection == "paper" && computerSelection == "rock"){
-        playerPoints++;
+        humanScore.textContent++;
         console.log(`You win, ${playerSelection} beats ${computerSelection}`);
     }
 
@@ -47,18 +54,18 @@ function playRound (playerSelection) {
         console.log(`Draw, ${computerSelection} is the same as ${playerSelection}`);
 
     else if(playerSelection == "paper" && computerSelection == "scissors"){
-        computerPoints++;
+        computerScore.textContent++;
         console.log(`You lose, ${computerSelection} beats ${playerSelection}`);
     }
 
     //playerSelection == "scissors"
     else if(playerSelection == "scissors" && computerSelection == "rock"){
-        computerPoints++;
+        computerScore.textContent++;
         console.log(`You lose, ${computerSelection} beats ${playerSelection}`);
     }
 
     else if(playerSelection == "scissors" && computerSelection == "paper"){
-        playerPoints++;
+        humanScore.textContent++;
         console.log(`You win, ${playerSelection} beats ${computerSelection}`);
     }
 
