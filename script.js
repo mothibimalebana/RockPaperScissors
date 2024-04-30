@@ -80,14 +80,18 @@ function playRound (playerSelection) {
     }
     else
         console.log("Either you didn't spell scissors right or you choose a invalid token")
+
+    getWinner(humanScore.textContent, computerScore.textContent);
 }
 
 function getWinner(humanScore, computerScore) {
     if(humanScore == 5){
         alert("You win : )");
+        location.reload();
     }
     else if(computerScore == 5) {
         alert("You lose : (");
+        location.reload();
     }
     else{
         console.log("continue playing");
