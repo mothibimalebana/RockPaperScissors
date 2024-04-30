@@ -1,6 +1,6 @@
 let gameChoices = ["rock", "paper", "scissors"];
-let playerPoints = 0;
-let computerPoints = 0;
+let playerPoints;
+let computerPoints;
 
 const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
@@ -27,6 +27,7 @@ computerScore.textContent = Number(computerPoints);
 function getComputerChoice () {
     return gameChoices[(Math.floor(Math.random() * gameChoices.length))];
 }
+
 //function to play a round
 function playRound (playerSelection) {
     computerSelection = gameChoices[(Math.floor(Math.random() * gameChoices.length))];
