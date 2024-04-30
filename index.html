@@ -1,13 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="#" type="image/x-icon">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <!--Font-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+    </style>
     <title>RockPaperScissors</title>
 </head>
+
 <body>
-    
+    <header>
+        <div class="headerDiv">
+            <h2>Human</h2>
+            <h2>Computer</h2>
+        </div>
+        <div class="scoreDiv">
+            <h4 id="humanScore"></h4>
+            <h4 id="computerScore"></h4>
+        </div>
+    </header>
+
+    <body>
+        <div class="hands">
+            <img style="max-height: 700px;" id="playerHand" src="./img/White-in-Jacket1.png" alt="white hand in a jacket">
+            <img style="max-height: 700px;" id="computerHand" src="./img/Purple-in-Jacket9.png" alt="purple hand in jacket">
+        </div>
+    </body>
+    <footer>
+        <div class="chooseOne">
+            <h4>CHOOSE ONE↓</h4>
+        </div>
+        <div class="options">
+            <button id="rock">ROCK</button>
+            <button id="paper">PAPER</button>
+            <button id="scissors">SCISSORS</button>
+        </div>
+    </footer>
 </body>
+
 </html>

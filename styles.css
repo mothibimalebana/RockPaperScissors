@@ -1,0 +1,80 @@
+body {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	min-height: 100vh;
+	font-family: "inter", sans-serif;
+}
+
+header {
+	min-width: 100vh;
+}
+
+.headerDiv {
+	display: flex;
+	flex-basis: 0 1 0;
+	flex-direction: row;
+	justify-content: space-around;
+
+	/**Typography**/
+	font-size: 30px;
+
+	margin-bottom: 0;
+}
+
+.headerDiv h2 {
+	margin-bottom: 0;
+}
+
+.scoreDiv {
+	display: flex;
+	flex-basis: 0 1 0;
+	flex-direction: row;
+	justify-content: space-around;
+	font-size: 30px;
+}
+
+.scoreDiv h4 {
+	margin-top: 0;
+}
+
+.hands {
+	display: flex;
+	flex-basis: 3 0 0;
+	justify-content: space-between;
+	flex: 30%;
+	max-height: 700px;
+}
+
+footer {
+	margin-top: auto;
+	display: flex;
+	flex-direction: column;
+	min-width: 100vh;
+}
+
+footer .chooseOne {
+	display: flex;
+
+	font-size: 28px;
+}
+
+footer .chooseOne h4 {
+	margin-bottom: 0;
+}
+
+footer .options {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	font-size: 30px;
+}
+
+button {
+	font-family: "inter", sans-serif;
+	font-weight: 700;
+	border: none;
+	background-color: white;
+	font-size: 55px;
+}
